@@ -29,4 +29,4 @@ Este robot puede:
 ### Instalación
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu_usuario/robot-multifuncional-arduino.git
+   git clone https://github.com/salvador2073820/Robot-Multifuncional.git
