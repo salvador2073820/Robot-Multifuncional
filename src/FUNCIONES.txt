@@ -1,0 +1,22 @@
+MODO DE EVITACION DE OBSTACULOS
+Este modo permite que el robot navegue de manera autónoma utilizando el sensor ultrasónico HC-SR04 montado sobre un servomotor. El objetivo es detectar objetos en la trayectoria y tomar decisiones de movimiento para evitar colisiones.
+•	El Arduino realiza mediciones constantes de distancia mediante el sensor ultrasónico.
+•	Cuando se detecta un obstáculo entre 2 cm y 15 cm.
+•	El robot compara las distancias laterales.
+•	Una vez libre el camino, continúa avanzando.
+
+MODO DE CONTROL BLUETOOTH
+En este modo, el usuario controla directamente el movimiento del robot mediante una aplicación móvil compatible con el módulo HC-05.
+El dispositivo envía caracteres individuales al Arduino, el cual interpreta dichos comandos para ejecutar movimientos específicos.
+•	El módulo HC-05 establece una conexión inalámbrica con un dispositivo Android.
+•	Cada botón presionado en la aplicación envía un carácter vía Bluetooth.
+•	Arduino recibe el comando por el puerto serial.
+•	El robot ejecuta la instrucción correspondiente mediante sus cuatro motores.
+
+
+MODO DE CONTROL DE VOZ
+Este modo permite controlar el robot mediante comandos de voz enviados desde una aplicación móvil, la cual traduce palabras clave a caracteres especiales transmitidos por Bluetooth.
+•	El usuario pronuncia un comando en la aplicación.
+•	La aplicación interpreta la voz y envía un carácter específico al HC-05.
+•	El Arduino recibe el carácter por Serial.
+•	Se ejecuta la acción correspondiente, verificando primero si existe espacio lateral en los giros.
